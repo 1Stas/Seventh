@@ -1,0 +1,29 @@
+﻿
+Создаем репозиторий на github
+
+выкачиваем репозиторий с github
+
+git clone git://github.com/schacon/grit.git           ссылка клонируемого репозитория
+git clone git://github.com/schacon/grit.git mygrit    если добавить mygrit репозиторий будет в этой папке.
+
+git add .                добавит файлы в каталоге для комментирования
+git commit -m "комент"   индексация для отправки на сервер
+git push                 отправка на сервер
+
+npm init --yes           создает package.json
+--yes                    установит на все вопросы дефолтные ответы
+
+npm i gulp -S            и др пакеты, создаст папку node_modules
+-S                       для записи в dependencies
+-D                       для записи в devDependencies
+
+
+npm install rimraf -g    установка пакета для удаления node_modules
+
+rimraf node_modules      удаление
+
+npm install -D gulp gulp-sass browser-sync gulp-autoprefixer gulp-plumber gulp-pug gulp-sourcemaps 
+
+                         установка нескольких пакетов сразу
+
+npm outdated             обновление установленных пакетов
