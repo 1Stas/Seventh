@@ -4,6 +4,7 @@
 body 
 	font-family: "Open Sans"
 	font-weight: 400
+	overflow: hidden
 	a 
 		text-decoration: none
 
@@ -137,6 +138,62 @@ $f20px: 20px
 
 
 // Page 2 //////////////////////////////////////////////////////////////////
+	<div class="nav-mob">
+  <input type="checkbox" id="a" />
+  <label for="a" class="but"></label>
+  <div class="menu">
+    <a href="">aaaaaa</a>
+    <a href="">bbbbbb</a>
+    <a href="">cccccc</a></div>
+  <div class="navbar">111111 1111 1111 1111 1111
+    <div>2222222222222222222</div>
+    <div>2222222222222222222</div>
+    <div>2222222222222222222</div>
+    <div>2222222222222222222</div>
+    <div>2222222222222222222</div>
+  </div>
+</div>
+
+.navbar {
+  position: relative;
+  top: 0px;
+  background: #c7c7c7;
+}
+.nav-mob {
+  position: relative;
+  top: 0px;
+}
+.but {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  right: 0;
+  background: red;
+  z-index: 1;
+}
+
+
+#a:checked ~ .but {
+  background: green;
+  top: 100px;
+}
+
+.menu {
+  position: absolute;
+  background: #ddd;
+  top: 0px;
+}
+.menu a {
+  display: block;
+}
+.nav-mob input:checked ~ .navbar {
+  position: relative;
+  top: 100px;
+  
+}
+
+	https://codepen.io/gubs/pen/kqEaz
 
 // Page 3 //////////////////////////////////////////////////////////////////
 
@@ -149,6 +206,7 @@ $f20px: 20px
 
 @media (max-width: 800px)
 	.navbar
+		padding: 20px 10px
 		a 
 			font-size: 16px
 
@@ -157,12 +215,24 @@ $f20px: 20px
 			width: 110px
 
 @media (max-width: 700px)
+	.navbar a 
+		font-size: 14px
+
+
 	.footer-1, .footer-2, .footer-3
 		display: flex
 		width: 100%
 		justify-content: center
 		padding: 1em 0
 
+@media (max-width: 600px)
+	.navbar 
+		padding: 25px
+		.nav-item
+			display: none
+
+	.logo
+		width: 100%
 
 
 // Page 2 media ////////////////////////////////////////////////////////////
