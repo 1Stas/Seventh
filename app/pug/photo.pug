@@ -1,0 +1,110 @@
+doctype html
+html
+	head
+		meta(charset= "utf-8")
+		meta(name='viewport', content="initial-scale=1.0, width=device-width")
+		meta(http-equiv="X-UA-Compatible" content="ie=edge")
+		meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+		link(rel="stylesheet" href="../css/style.css")
+		link(rel="stylesheet" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css")
+		link(rel="stylesheet" href="../libs/owl.carousel.css")
+		link(rel="stylesheet" href="../libs/magnific.css")
+		link(rel="stylesheet" href="../libs/normalize.css")
+		title SEDONA
+	body
+		.main
+			input(type="checkbox" id="nav-input")
+			.menu-mobile
+				a.mobile-item(href="index.html") ГЛАВНАЯ
+				a.mobile-item(href="photo.html") ФОТО И ВИДЕО
+				a.mobile-item(href="form.html") ФОРМА ОТЗЫВА
+				a.mobile-item(href="#") HTML ACADEMY
+			.navbar
+				label(for="nav-input" class="nav-button")
+					span.s1
+					span.s2
+					span.s3
+				a.nav-item(href="index.html") ГЛАВНАЯ
+				a.nav-item(href="photo.html") ФОТО И ВИДЕО
+				.logo
+					picture
+						source(media="(max-width: 600px)" srcset="../svg/logotyle-mobile.svg")
+						source(media="(max-width: 800px)" srcset="../svg/logotype-tablet.svg")
+						img(src="../svg/logotype-desktop.svg", alt="лого")
+				a.nav-item(href="form.html") ФОРМА ОТЗЫВА
+				a.nav-item(href="#") HTML ACADEMY
+			.img-back
+				img.main-svg(src="../svg/text-index.svg", alt="main-svg")
+				img.triangle(src="../svg/intro-triangle.svg", alt="triangle-svg")
+				picture
+					source(media="(max-width: 600px)" srcset="../img/back-mobile.png")
+					img(src="../img/back-desktop.png", alt="background")
+			section
+				.photo
+					.ph-item-1
+						h2 ФОТО И ВИДЕО
+						p НЕ МОЖЕТЕ РЕШИТЬСЯ НА ПУТЕШЕСТВИЕ ИЗ-ЗА КУРСА? ФОТОГРАФИИ ПОМОГУТ ВАМ ЗАБЫТЬ О ПОЛИТИКЕ И ЭКОНОМИКЕ
+					.ph-item-2
+						picture
+							source(media="(max-width: 600px)" srcset="../img/photo-1-mobile.png")
+							source(media="(max-width: 800px)" srcset="../img/photo-1-tablet.png")
+							img(src="../img/photo-1-desktop.png" alt="road")
+						div
+							h2 НЕРОДНЫЕ ПРОСТОРЫ
+							p Автор фото: Борис
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 40" width="44" height="40"><defs><path d="M-2-3h48v45H-2z"/></defs><path id="Path 1" fill-rule="evenodd" d="M28.6 2c.4.6.8 1.4.8 2.2v.6l-2 9.2H40c2.2 0 4 1.8 4 4h-.2v4c0 .4 0 1-.2 1.4l-6 14.2C37 39 35.6 40 34 40H16c-2.2 0-4-1.8-4-4V16c0-1.2.4-2.2 1.2-2.8L26.4 0l2.2 2zM8 40H0V16h8v24zm8.03-23.97l-.03.03V36h18l5.8-13.88V18H22.44l1.05-4.85 1.28-5.86-8.74 8.74zM44 18v.09V18zM4 20v16-16z"/></svg>
+							span 1350
+					.ph-item-3
+						picture
+							source(media="(max-width: 600px)" srcset="../img/photo-2-mobile.png")
+							source(media="(max-width: 800px)" srcset="../img/photo-2-tablet.png")
+							img(src="../img/photo-2-desktop.png" alt="bush")
+						div
+							h2 МЕСТНАЯ РАСТИТЕЛЬНОСТЬ
+							p Автор фото: Сергей
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 40" width="44" height="40"><defs><path d="M-2-3h48v45H-2z"/></defs><path id="Path 1" fill-rule="evenodd" d="M28.6 2c.4.6.8 1.4.8 2.2v.6l-2 9.2H40c2.2 0 4 1.8 4 4h-.2v4c0 .4 0 1-.2 1.4l-6 14.2C37 39 35.6 40 34 40H16c-2.2 0-4-1.8-4-4V16c0-1.2.4-2.2 1.2-2.8L26.4 0l2.2 2zM8 40H0V16h8v24zm8.03-23.97l-.03.03V36h18l5.8-13.88V18H22.44l1.05-4.85 1.28-5.86-8.74 8.74zM44 18v.09V18zM4 20v16-16z"/></svg>
+							span 143
+					.ph-item-4
+						picture
+							source(media="(max-width: 600px)" srcset="../img/photo-3-mobile.png")
+							source(media="(max-width: 800px)" srcset="../img/photo-3-tablet.png")
+							img(src="../img/photo-3-desktop.png" alt="forest")
+						div
+							h2 ДОРОГА НА СЕВЕР
+							p Автор фото: Петр
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 40" width="44" height="40"><defs><path d="M-2-3h48v45H-2z"/></defs><path id="Path 1" fill-rule="evenodd" d="M28.6 2c.4.6.8 1.4.8 2.2v.6l-2 9.2H40c2.2 0 4 1.8 4 4h-.2v4c0 .4 0 1-.2 1.4l-6 14.2C37 39 35.6 40 34 40H16c-2.2 0-4-1.8-4-4V16c0-1.2.4-2.2 1.2-2.8L26.4 0l2.2 2zM8 40H0V16h8v24zm8.03-23.97l-.03.03V36h18l5.8-13.88V18H22.44l1.05-4.85 1.28-5.86-8.74 8.74zM44 18v.09V18zM4 20v16-16z"/></svg>
+							span 96
+					.ph-item-5
+						picture
+							source(media="(max-width: 600px)" srcset="../img/photo-4-mobile.png")
+							source(media="(max-width: 800px)" srcset="../img/photo-4-tablet.png")
+							img(src="../img/photo-4-desktop.png" alt="bridge")
+						div
+							h2 МОСТ ДЪЯВОЛА
+							p Автор фото: Антон
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 40" width="44" height="40"><defs><path d="M-2-3h48v45H-2z"/></defs><path id="Path 1" fill-rule="evenodd" d="M28.6 2c.4.6.8 1.4.8 2.2v.6l-2 9.2H40c2.2 0 4 1.8 4 4h-.2v4c0 .4 0 1-.2 1.4l-6 14.2C37 39 35.6 40 34 40H16c-2.2 0-4-1.8-4-4V16c0-1.2.4-2.2 1.2-2.8L26.4 0l2.2 2zM8 40H0V16h8v24zm8.03-23.97l-.03.03V36h18l5.8-13.88V18H22.44l1.05-4.85 1.28-5.86-8.74 8.74zM44 18v.09V18zM4 20v16-16z"/></svg>
+							span 254
+					.ph-item-6
+						h2 ВСЕ ЕЩЕ СОМНЕВАЕТЕСЬ?
+						p СМОТРИТЕ ВИДЕО ПРЕЗЕНТАЦИЮ И СКОРЕЕ ЗА БИЛЕТАМИ, ПОКА ОНИ НЕ ПОДОРОЖАЛИ В ОЧЕРЕДНОЙ РАЗ!
+					.ph-item-7
+
+			footer
+				.footer
+					.footer-wrapper
+						.footer-1
+							a(href="index.html") #VISITSEDONA
+						.footer-2
+							a(href="#")
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 30" fill="#D22855" width="36" height="30"><defs><path d="M0 1h35v29H0z"/></defs><path id="Path 1" d="M22.57.98c3.47-.97 6.14.53 7.37 2.3 1.38-.45 2.74-.94 4.14-1.38-.01 1.68-1.08 2.96-1.77 3.45 1.41.34 2.69-.96 2.69-.96-.35 1.96-2.07 3.5-3.22 3.96-.48 13.18-6.55 21.91-20.77 21.64h-.92c-.84 0-8.58-.89-10.09-3.68 4.68.38 8.02-.83 9.67-2.3-1.98-.59-5.52-.93-6.14-5.76.72.21 1.17.44 2.46.23C3.51 16.81.77 15.41.92 11.11c.59.64 2.2 1.05 2.76.92-1.45-.47-4.06-6.56-1.84-9.67 3.75 3.62 7.7 7.04 14.74 7.37.43-4.48 2.34-7.48 5.99-8.75z"/></svg>
+							a(href="#")
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 39" fill="#D22855" width="19" height="39"><defs><path d="M1 0h17v38H1z"/></defs><path id="Path 1" d="M13.55 6.83h4.79V.11h-5.75C6.31.47 4.08 4.89 4.9 12.34H1v7.04h3.92V38h7.67V19.38h5.71v-7.04h-5.73c-.04-2.09-.07-4.81.98-5.51z"/></svg>
+							a(href="#")
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 29" width="40" height="29"><defs><path d="M0 1h40v28H0z"/></defs><path id="Path 1" fill-rule="evenodd" d="M39.96 6.64v16.69A5.68 5.68 0 0 1 34.29 29H5.67A5.68 5.68 0 0 1 0 23.33V6.64A5.68 5.68 0 0 1 5.67.97h28.62a5.68 5.68 0 0 1 5.67 5.67zm-12.35 8.34L14.07 8.21v13.54l13.54-6.77z"/></svg>
+						.footer-3
+							a(href="#") Разаработано
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 309 391" fill="#D22855" width="309" height="391"><defs><path d="M0 0h309v391H0z"/></clipPath></defs><path id="Path 1" fill-rule="evenodd" d="M307.77 17.43v281.14l-153.39 91.27L1 298.57V17.43L154.38 1.35l1.61.17 151.78 15.91zM153.63 76.97v-.01L21.35 156.47l132.09 78.52 22.58-13.56-22.16-13.06.13-13.9 33.78 19.91.26-.16 10.55-7.06-44.72-26.59.13-13.9 56.66 33.7 9.75-5.74 1.48-.87.61-.36-68.63-40.81.13-13.91 80.3 47.77 16.83-9.92 36.48-21.49-133.97-78.07zm134.07 93.02l-41.13 24.56v45.41l.12-.06v13.96l-92.31 55.23-91.42-54.95.13-13.9 91.4 54.37-.23-14.7-91.43-54.95.14-13.9 91.06 54.2-.22-14.32-132.75-79.01v115.23l133.32 79.33 133.32-79.33V169.99zm0-134.48L154.39 21.53 21.06 35.51v105.46l132.57-78.93v-.02l.02.01.01-.01v.02l134.04 79.02V35.51z" stroke="#231f20" stroke-width="2"/></svg>
+script(src="../js/jquery.min.js")
+script(src="../js/magnific.js")
+script(src="../js/owl.carousel.min.js")
+script(src="../js/common.js")

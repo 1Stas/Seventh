@@ -4,9 +4,11 @@
 body 
 	font-family: "Open Sans"
 	font-weight: 400
-	overflow: hidden
 	a 
 		text-decoration: none
+
+.main
+	overflow: hidden
 
 img 
 	width: 100%
@@ -14,16 +16,17 @@ img
 .button 
 	display: block
 	padding: 10px
-	border: 2px solid #444
+	border: 2px solid #82B3D3
+	background: #82B3D3
 	font-size: 17px
 	font-weight: 700
 	text-align: center
 	text-decoration: none
-	color: #444
+	color: #fff
 	box-sizing: border-box
 	&:hover
-		background: #444444
-		color: #ffffff
+		background: #fff
+		color: #82B3D3
 	&:active
 		color: #8e8e8e
 
@@ -31,15 +34,87 @@ $color: #82B3D3
 $f20px: 20px
 
 .navbar
+	position: relative // rel для popup
 	display: flex
 	align-items: center
 	padding: 20px
 	text-align: center
+	background: #fff
 	a 
 		width: 20%
 		font-weight: 600
 		color: #000
 		font-size: 20px
+
+//Popup начало
+#nav-input 
+	display: none
+
+.menu-mobile
+	position: absolute
+	z-index: -1
+	background: #82B3D3
+	text-align: center
+	box-shadow: inset 0 -1px 5px #7196B1
+	a 
+		display: block
+		color: #fff
+		padding: 10px 0
+		cursor: pointer
+		border-bottom: 1px solid #6490AB
+		box-shadow: 0 1px 0 #96C2DD
+		&:nth-last-child(1)
+			border: 0
+			box-shadow: 0 0
+		&:hover
+			color: #23A9E1
+
+#nav-input:checked ~ .menu-mobile
+	position: relative
+	z-index: 3
+
+.nav-button 
+	display: block
+	position: absolute
+	top: 15px
+	right: 20px  
+	z-index: 1 
+	-webkit-user-select: none
+	user-select: none
+
+.nav-button span 
+	display: block
+	width: 33px
+	height: 4px
+	margin-bottom: 5px
+	position: relative
+	background: #23A9E1
+	border-radius: 3px  
+	z-index: 1  
+	transform-origin: 4px 0px  
+	transition: transform 0.5s
+
+.nav-button .s2 
+	transform-origin: 0% 0%
+
+.nav-button .s3 
+	transform-origin: 0% 100%
+
+#nav-input:checked ~ .navbar .nav-button span 
+	opacity: 1
+	transform: rotate(45deg) translate(-2px, -1px)
+	background: #232323
+
+#nav-input:checked ~ .navbar .nav-button .s2 
+	opacity: 0
+	transform: translate(-50px, 0)
+	transition: .5s
+
+#nav-input:checked ~ .navbar .nav-button .s3 
+	opacity: 1
+	transform: rotate(-45deg) translate(0, -1px)
+//Popup конец
+
 
 .logo
 	position: relative
@@ -66,8 +141,62 @@ $f20px: 20px
 .triangle
 	position: absolute
 	bottom: 1px
-	left: -5px
+	left: -2%
 	width: 102%
+
+.info
+	display: flex
+	flex-wrap: wrap
+	text-align: center
+	padding: 40px 0
+	svg
+		width: 100px
+		height: 100px
+		fill: $color
+		&:hover
+			fill: #26c28b
+	h2 
+		font-size: 24px
+	p 
+		font-size: 18px
+		margin: 30px 0
+		line-height: 30px
+
+.item-1
+	width: 100%
+	padding: 80px 6%
+
+.item-2, .item-8
+	width: 30%
+	background: $color
+	color: #fff
+	display: flex
+	div
+		margin: auto
+		padding: 0 10%
+
+.item-3, .item-7
+	width: 70%
+
+.item-4, .item-5, .item-6, .item-9, .item-10, .item-11
+	width: 33%
+	padding: 4% 2%
+
+.item-9, .item-10, .item-11
+	background: #f2f2f2
+
+.item-12
+	width: 100%
+	padding: 50px 30%
+	p 
+		margin: 40px 0
+		line-height: 30px
+	.button 
+		margin-top: 20px
+		padding: 20px
+		font-size: 18px
+		letter-spacing: 2px
+
 
 .map
 	position: relative
@@ -76,6 +205,7 @@ $f20px: 20px
 	&:before
 		position: absolute
 		content: "Нефиг, сидите в РФ"
+		text-align: center
 		font-size: 40px
 		color: $color
 		font-weight: 600
@@ -138,71 +268,80 @@ $f20px: 20px
 
 
 // Page 2 //////////////////////////////////////////////////////////////////
-	<div class="nav-mob">
-  <input type="checkbox" id="a" />
-  <label for="a" class="but"></label>
-  <div class="menu">
-    <a href="">aaaaaa</a>
-    <a href="">bbbbbb</a>
-    <a href="">cccccc</a></div>
-  <div class="navbar">111111 1111 1111 1111 1111
-    <div>2222222222222222222</div>
-    <div>2222222222222222222</div>
-    <div>2222222222222222222</div>
-    <div>2222222222222222222</div>
-    <div>2222222222222222222</div>
-  </div>
-</div>
 
-.navbar {
-  position: relative;
-  top: 0px;
-  background: #c7c7c7;
-}
-.nav-mob {
-  position: relative;
-  top: 0px;
-}
-.but {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  top: 0;
-  right: 0;
-  background: red;
-  z-index: 1;
-}
+.photo 
+	display: flex
+	flex-wrap: wrap
+	padding: 60px 0
+	text-align: center
+	h2 
+		font-size: 24px
+	p 
+		font-size: 20px
+	svg
+		width: 40px
+
+.ph-item-1, .ph-item-6
+	padding: 4% 30%
+
+.ph-item-2
+	width: 100%
+
+.ph-item-3, .ph-item-4, .ph-item-5
+	width: 33.33%
+
+.ph-item-2, .ph-item-3, .ph-item-4, .ph-item-5
+	position: relative
+	div 
+		position: absolute
+		bottom: 0
+		padding: 2%
+		background: rgba(0, 0, 0, 0.3)
+		color: #fff
+		width: 100%
+		h2, p
+			text-align: left
+		svg
+			position: absolute
+			right: 80px
+			bottom: 40px
+			fill: #fff
+			&:hover
+				fill: $color
+		span
+			position: absolute
+			right: 30px
+			bottom: 44px
 
 
-#a:checked ~ .but {
-  background: green;
-  top: 100px;
-}
 
-.menu {
-  position: absolute;
-  background: #ddd;
-  top: 0px;
-}
-.menu a {
-  display: block;
-}
-.nav-mob input:checked ~ .navbar {
-  position: relative;
-  top: 100px;
-  
-}
-
-	https://codepen.io/gubs/pen/kqEaz
+	
 
 // Page 3 //////////////////////////////////////////////////////////////////
 
 // Page 1 media ////////////////////////////////////////////////////////////
 
+@media (max-width: 1200px)
+	.info 
+		h2 
+			font-size: 20px
+		p 
+			font-size: 16px
+			margin: 20px 0
+	
 @media (max-width: 1000px)
 	.navbar
 		a 
 			font-size: 18px
+
+	.info
+		svg
+			width: 60px
+
+	.item-12
+		padding: 50px 20%
+		.button
+			font-size: 16px
 
 @media (max-width: 800px)
 	.navbar
@@ -213,6 +352,22 @@ $f20px: 20px
 	.logo
 		img
 			width: 110px
+
+	.info
+		p 
+			font-size: 14px
+			margin: 10px 0
+		h2 
+			font-size: 18px
+
+	.item-2, .item-8
+		width: 40%
+
+	.item-3, .item-7
+		width: 60%
+
+	.item-4, .item-5, .item-6, .item-9, .item-10, .item-11
+		padding: 4%
 
 @media (max-width: 700px)
 	.navbar a 
@@ -225,6 +380,60 @@ $f20px: 20px
 		justify-content: center
 		padding: 1em 0
 
+	.item-2, .item-8
+		width: 100%
+		padding: 2%
+
+	.item-3, .item-7, 
+		width: 100%
+
+	.item-1
+		padding: 60px 6%
+
+	.item-2
+		order: 1
+
+	.item-3
+		order: 2
+
+	.item-4
+		order: 3
+		width: 100%
+
+	.item-5
+		order: 4
+		width: 100%
+
+	.item-6
+		order: 5
+		width: 100%
+
+	.item-7 
+		order: 7
+
+	.item-8
+		order: 6
+
+	.item-9
+		order: 8
+		width: 100%
+
+	.item-10 
+		order: 9
+		width: 100%
+
+	.item-11
+		order: 10
+		width: 100%
+
+	.item-12
+		order: 11
+
+
+@media (min-width: 600px)
+	.navbar-mobile, .nav-button
+		display: none
+
 @media (max-width: 600px)
 	.navbar 
 		padding: 25px
@@ -233,8 +442,31 @@ $f20px: 20px
 
 	.logo
 		width: 100%
+		img 
+			width: 90px
+			top: -25px
 
+	.main-svg
+		top: 20%
 
+	.triangle
+		left: -37%
+		width: 174%
+
+	.map:before
+		font-size: 20px
+
+	.img-back
+		width: 200%
+		left: -50%
+
+@media (max-width: 500px)
+	.item-12
+		padding: 4% 2%
+
+	.item-2, .item-8
+		div
+			padding: 0
 // Page 2 media ////////////////////////////////////////////////////////////
 
 // Page 3 media ////////////////////////////////////////////////////////////
