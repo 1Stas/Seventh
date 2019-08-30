@@ -1,0 +1,134 @@
+doctype html
+html
+	head
+		meta(charset= "utf-8")
+		meta(name='viewport', content="initial-scale=1.0, width=device-width")
+		meta(http-equiv="X-UA-Compatible" content="ie=edge")
+		meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+		link(rel="stylesheet" href="../css/style.css")
+		link(rel="stylesheet" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css")
+		link(rel="stylesheet" href="../libs/owl.carousel.css")
+		link(rel="stylesheet" href="../libs/magnific.css")
+		link(rel="stylesheet" href="../libs/normalize.css")
+		title SEDONA
+	body
+		.main
+			input(type="checkbox" id="nav-input")
+			.menu-mobile
+				a.mobile-item(href="index.html") ГЛАВНАЯ
+				a.mobile-item(href="photo.html") ФОТО И ВИДЕО
+				a.mobile-item(href="form.html") ФОРМА ОТЗЫВА
+				a.mobile-item(href="#") HTML ACADEMY
+			.navbar
+				label(for="nav-input" class="nav-button")
+					span.s1
+					span.s2
+					span.s3
+				a.nav-item(href="index.html") ГЛАВНАЯ
+				a.nav-item(href="photo.html") ФОТО И ВИДЕО
+				.logo
+					picture
+						source(media="(max-width: 600px)" srcset="../svg/logotyle-mobile.svg")
+						source(media="(max-width: 800px)" srcset="../svg/logotype-tablet.svg")
+						img(src="../svg/logotype-desktop.svg", alt="лого")
+				a.nav-item(href="form.html") ФОРМА ОТЗЫВА
+				a.nav-item(href="#") HTML ACADEMY
+			.img-back
+				img.main-svg(src="../svg/text-index.svg", alt="main-svg")
+				img.triangle(src="../svg/intro-triangle.svg", alt="triangle-svg")
+				picture
+					source(media="(max-width: 600px)" srcset="../img/back-mobile.png")
+					img(src="../img/back-desktop.png", alt="background")
+		section
+			.form-title
+				h2 ОСТАВЬТЕ СВОЙ ОТЗЫВ
+				p ПОМОГИТЕ НАШИМ ОТЕЛЯМ СТАТЬ ЛУЧШЕ! ОСТАВЬТЕ ОТЗЫВ О НИХ, А ТАКЖЕ О ПОСЕЩЕННЫХ ВАМИ ДОСТОПРИМЕЧАТЕЛЬНОСТЯХ.
+		section
+			.form 
+				form
+					.app
+						legend ВАШЕ ОБЩЕЕ ВПЕЧАТЛЕНИЕ:
+						label
+							input(type="radio" name="radio" checked)
+							p.check Скорее положительное
+						label
+							input(type="radio" name="radio")
+							p.check Скорее отрицательное
+						label
+							input(type="radio" name="radio")
+							p.check Затрудняюсь ответить
+					.name
+						legend ПРЕДСТАВЬТЕСЬ:
+						label
+							p ФАМИЛИЯ:
+							input(type="text" placeholder="Петр") 
+						label
+							p ИМЯ:
+							input(type="text" placeholder="Иванов") 
+						label
+							p ОТЧЕСТВО:
+							input(type="text" placeholder="Александрович") 
+					.contacts
+						legend КОНТАКТНАЯ ИНФОРМАЦИЯ:
+						.contacts-flex
+							label
+								.input-phone
+									span ТЕЛЕФОН*:
+									input(type="text" placeholder="Номер, пожалуйста")
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 40" width="41" height="40"><defs><path d="M1 1h39v39H1z"/></defs><path id="Path 1" fill-rule="evenodd" d="M23.16 14.56v-2.05c0-1.13.92-2.05 2.05-2.05s2.05.92 2.05 2.05v2.05l11.07 11.82c.77.76 1.24 1.79 1.24 2.94v3.3c0 1.81-1.47 3.28-3.28 3.28h-.82v2.05c0 1.13-.92 2.05-2.06 2.05a2.05 2.05 0 0 1-2.04-2.05V35.9H10.03v2.05c0 1.13-.92 2.05-2.05 2.05s-2.05-.92-2.05-2.05V35.9H5.1c-1.81 0-3.28-1.47-3.28-3.28v-3.3c0-1.15.48-2.18 1.24-2.94l11.08-11.82v-2.05c0-1.13.91-2.05 2.04-2.05s2.05.92 2.05 2.05v2.05h4.93zm-9.02 10.67c0 3.63 2.93 6.56 6.56 6.56 3.62 0 6.56-2.93 6.56-6.56a6.56 6.56 0 1 0-13.12 0zm9.84 0c0 1.81-1.47 3.28-3.28 3.28-1.82 0-3.29-1.47-3.29-3.28 0-1.82 1.47-3.28 3.29-3.28 1.81 0 3.28 1.47 3.28 3.28zM37.3 4.37c2.11 2.08 2.82 5.75 3.06 8.07 0 0 .04.23.04.33 0 .91-.75 1.64-1.65 1.64-.1 0-4.05-.33-6.43-.52-.06-.01-.12-.02-.17-.03a1.65 1.65 0 0 1-1.61-1.65V8.98c0-1-.82-1.8-1.82-1.8H12.67c-1 0-1.82.8-1.82 1.8v3.23c0 .9-.72 1.62-1.6 1.64-.06.02-.12.03-.18.04-2.37.19-6.32.51-6.43.51-.9 0-1.64-.73-1.64-1.63 0-.11.03-.33.03-.33.24-2.33.95-5.99 3.06-8.07C6.65 1.87 13.68.61 20.7.61c7.01 0 14.05 1.26 16.6 3.76z"/></svg>
+							label
+								.input-email
+									span ЭЛЕКТРОННАЯ ПОЧТА*:
+									input(type="email" placeholder="Введите почту *")
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 28" width="36" height="28"><defs><path d="M0 0h36v28H0z"/></defs><path id="Path 1" d="M29.83 3.7c2.39-2 1.8-3.63-1.32-3.63H7.46C4.34.07 3.75 1.7 6.15 3.7l7.48 6.23c2.4 2 6.32 2 8.71 0l7.49-6.23zm-6 10.46c-2.4 1.99-4.39 3.65-4.44 3.67l-.04.03c-.15.11-.3.2-.47.27-.07.03-.13.07-.2.09-.22.07-.45.12-.67.12h-.04c-.23 0-.45-.05-.67-.12-.07-.02-.14-.06-.2-.09-.17-.07-.32-.16-.47-.27l-.04-.03c-.05-.02-2.04-1.68-4.44-3.67l-7.79-6.5C1.96 5.67 0 6.58 0 9.7v12.63C0 25.45 2.55 28 5.67 28h24.64c3.12 0 5.67-2.55 5.67-5.67V9.7c0-3.12-1.96-4.03-4.36-2.04l-7.79 6.5z"/></svg>
+					.achievement
+						legend ПОСЕЩАЕМЫЕ ДОСТОПРИМЕЧАТЕЛЬНОСТИ:
+						.achievement-flex
+							label
+								input(type="checkbox" name="checkbox" checked)
+								p.check Мост дъявола
+							label
+								input(type="checkbox" name="checkbox" checked)
+								p.check Гора колокол
+							label
+								input(type="checkbox" name="checkbox")
+								p.check Слайд парк
+							label
+								input(type="checkbox" name="checkbox")
+								p.check Красные скалы 
+					.emotion
+						.fail
+							h2 Что то пошло не так
+							p Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить. 
+							a.button(href="#") О К
+						.success
+							h2 Ваша заявка отправлена
+							p Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.
+							a.button(href="#") ЗАКРЫТЬ ОКНО
+						legend ОПИШИТЕ СВОИ ЭМОЦИИ:
+						textarea(placeholder="Опишите подробно все свои восторги")
+					.button-form
+						a(href="#").button ОТПРАВИТЬ ФОРМУ 
+						div
+							span.snowflake * 
+							span - ОБЯЗАТЕЛЬНЫЕ ДЛЯ ЗАПОЛНЕНИЯ ПОЛЯ
+
+		footer
+				.footer
+					.footer-wrapper
+						.footer-1
+							a(href="index.html") #VISITSEDONA
+						.footer-2
+							a(href="#")
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 30" fill="#D22855" width="36" height="30"><defs><path d="M0 1h35v29H0z"/></defs><path id="Path 1" d="M22.57.98c3.47-.97 6.14.53 7.37 2.3 1.38-.45 2.74-.94 4.14-1.38-.01 1.68-1.08 2.96-1.77 3.45 1.41.34 2.69-.96 2.69-.96-.35 1.96-2.07 3.5-3.22 3.96-.48 13.18-6.55 21.91-20.77 21.64h-.92c-.84 0-8.58-.89-10.09-3.68 4.68.38 8.02-.83 9.67-2.3-1.98-.59-5.52-.93-6.14-5.76.72.21 1.17.44 2.46.23C3.51 16.81.77 15.41.92 11.11c.59.64 2.2 1.05 2.76.92-1.45-.47-4.06-6.56-1.84-9.67 3.75 3.62 7.7 7.04 14.74 7.37.43-4.48 2.34-7.48 5.99-8.75z"/></svg>
+							a(href="#")
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 39" fill="#D22855" width="19" height="39"><defs><path d="M1 0h17v38H1z"/></defs><path id="Path 1" d="M13.55 6.83h4.79V.11h-5.75C6.31.47 4.08 4.89 4.9 12.34H1v7.04h3.92V38h7.67V19.38h5.71v-7.04h-5.73c-.04-2.09-.07-4.81.98-5.51z"/></svg>
+							a(href="#")
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 29" width="40" height="29"><defs><path d="M0 1h40v28H0z"/></defs><path id="Path 1" fill-rule="evenodd" d="M39.96 6.64v16.69A5.68 5.68 0 0 1 34.29 29H5.67A5.68 5.68 0 0 1 0 23.33V6.64A5.68 5.68 0 0 1 5.67.97h28.62a5.68 5.68 0 0 1 5.67 5.67zm-12.35 8.34L14.07 8.21v13.54l13.54-6.77z"/></svg>
+						.footer-3
+							a(href="#") Разаработано
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 309 391" fill="#D22855" width="309" height="391"><defs><path d="M0 0h309v391H0z"/></clipPath></defs><path id="Path 1" fill-rule="evenodd" d="M307.77 17.43v281.14l-153.39 91.27L1 298.57V17.43L154.38 1.35l1.61.17 151.78 15.91zM153.63 76.97v-.01L21.35 156.47l132.09 78.52 22.58-13.56-22.16-13.06.13-13.9 33.78 19.91.26-.16 10.55-7.06-44.72-26.59.13-13.9 56.66 33.7 9.75-5.74 1.48-.87.61-.36-68.63-40.81.13-13.91 80.3 47.77 16.83-9.92 36.48-21.49-133.97-78.07zm134.07 93.02l-41.13 24.56v45.41l.12-.06v13.96l-92.31 55.23-91.42-54.95.13-13.9 91.4 54.37-.23-14.7-91.43-54.95.14-13.9 91.06 54.2-.22-14.32-132.75-79.01v115.23l133.32 79.33 133.32-79.33V169.99zm0-134.48L154.39 21.53 21.06 35.51v105.46l132.57-78.93v-.02l.02.01.01-.01v.02l134.04 79.02V35.51z" stroke="#231f20" stroke-width="2"/></svg>
+script(src="../js/jquery.min.js")
+script(src="../js/magnific.js")
+script(src="../js/owl.carousel.min.js")
+script(src="../js/common.js")
